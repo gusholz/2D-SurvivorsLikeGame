@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://x2c1rqceo740"]
+[gd_scene load_steps=5 format=3 uid="uid://x2c1rqceo740"]
 
 [ext_resource type="TileSet" uid="uid://c1hjfs8pisqhf" path="res://tileset/tileset.tres" id="1_0gofm"]
 [ext_resource type="PackedScene" uid="uid://db710853bnij4" path="res://Scenes/Player/player.tscn" id="1_5kvis"]
+[ext_resource type="PackedScene" uid="uid://cpfshljsfgu5i" path="res://Scenes/Game_camera/game_camera.tscn" id="1_tmrj6"]
+[ext_resource type="PackedScene" uid="uid://d12gmbqtfr4au" path="res://Scenes/basic_enemy/basic_enemy.tscn" id="4_sihk2"]
 
 [node name="Main" type="Node"]
+
+[node name="GameCamera" parent="." instance=ExtResource("1_tmrj6")]
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(64, 64)
@@ -13,3 +17,39 @@ layer_0/tile_data = PackedInt32Array(2424888, 65536, 4, 2359352, 65536, 4, 22938
 
 [node name="Player" parent="." instance=ExtResource("1_5kvis")]
 position = Vector2(39, 25)
+collision_layer = 0
+
+[node name="BasicEnemy" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(796, 555)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BasicEnemy3" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(796, 555)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BasicEnemy4" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(796, 555)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BasicEnemy5" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(796, 555)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BasicEnemy6" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(796, 555)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BasicEnemy7" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(796, 555)
+collision_layer = 2
+collision_mask = 2
+
+[node name="BasicEnemy2" parent="." instance=ExtResource("4_sihk2")]
+position = Vector2(1248, 861)
+collision_layer = 2
+collision_mask = 2
